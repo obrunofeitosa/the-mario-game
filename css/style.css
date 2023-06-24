@@ -1,16 +1,80 @@
+/* Author: Bruno Feitosa
+   v1.0 | 24-06-2023
+*/
+
+/*Estilos*/
+
 .game-board {
     width: 80%;
-    height: 500px;
+    height: 600px;
     border: 1px solid #333;
     margin: 0 auto;
     position: relative;
-    overflow: ;
+    overflow: hidden;
 }
 
 .pipe {
     position: absolute;
     bottom: 0;
-    width: 80px;
-    right: 0%;
+    width: 50px;
+    right: 100%;
+    animation-name: pipe-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
 }
 
+.clouds {
+    width: 80%;
+}
+
+.mario {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.jump {
+    animation-name: jump-mario-animation;
+    animation-duration: 500ms;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+}
+
+/*Animação do Pipe*/
+@keyframes pipe-animation {
+    from {
+        right: -20%;
+
+    }
+
+    to {
+        right: 100%;
+    }
+
+}
+
+/*Animação do Mario Pulando*/
+@keyframes jump-mario-animation {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}

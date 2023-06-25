@@ -5,28 +5,35 @@
 /*Estilos*/
 
 .game-board {
-    width: 80%;
+    width: 800px;
     height: 600px;
-    border: 1px solid #333;
+    border: 5px solid #333;
+    border-bottom: 15px solid green;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF );
 }
 
 .pipe {
     position: absolute;
     bottom: 0;
     width: 55px;
-    right: 100%;
     animation-name: pipe-animation;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-timing-function: linear; 
 }
 
 .clouds {
-    width: 80%;
+    position: absolute;
+    width: 500px;
+    animation-name: clouds-animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear; 
 }
 
 .mario {
@@ -77,4 +84,17 @@
     100% {
         bottom: 0;
     }
+}
+
+/*Animação da Nuvem*/
+@keyframes clouds-animation {
+    from {
+        right: -65%;
+
+    }
+
+    to {
+        right: 100%;
+    }
+
 }
